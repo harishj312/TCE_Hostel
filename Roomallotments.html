@@ -6,7 +6,7 @@
         <script src="angular.min.js"></script>
         <script src="room.js"></script>
     </head>
-    <body ng-app="myApp" ng-controller="myController">
+    <body ng-app="myApp" ng-controller="firstCtrl">
         <header>
             <img src="image/logo.jpeg">
             <h2>TCE Hostel</h2>
@@ -14,7 +14,6 @@
         <section>
             <h2>Room Allotments</h2>
             <div>
-                <label>Choose your block</label>
                 <select ng-model="block">
                     <option>A</option>
                     <option>B</option>
@@ -23,11 +22,28 @@
                     <option>E</option>
                     <option>F</option>
                 </select>
+                <button id="block" ng-click="changeblock(block)">Choose your block</button>
             </div>
-            <div id="floor">
-                <button>Second</button>
-                <button>First</button>
-                <button>Ground</button>
+            <div class="room">
+                <div id="room1" ng-repeat="x in room_num" ng-if="$index < 5">
+                    <button>{{x}}</button>
+                </div>
+                <div id="room2" ng-repeat="x in room_num" ng-if="$index > 4">
+                    <button>{{x}}</button>
+                </div>
+            </div>
+            <div class="allot">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+            <div class="floor">
+                <h3>{{bl}}-Block</h3>
+                <button ng-click="changeroom('2')">Second</button>
+                <button ng-click="changeroom('1')">First</button>
+                <button ng-click="changeroom('0')">Ground</button>
+                <h3>Floor:{{num}}</h3>
             </div>
         </section>
     </body>

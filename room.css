@@ -21,7 +21,38 @@ section{
 select{
     width: 100px;
 }
-#floor{
-    display:;
-
+.floor button{
+    width: 130px;
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    display:block;
+}
+.floor{
+    position: absolute;
+    right: 10px;
+    bottom: 200px;
+}
+.floor button:hover,#block:hover{
+    background-color: lightgray;
+    color: black;
+}
+.room button{
+    padding: 40px 40px;
+    color: white;
+    background-color:#003380 ;
+    font-size: 20px;
+    float: left;
+    margin: 10px;
+}
+#room1{
+    position:relative;
+    top: 150px;
+    left: 200px;
+}
+#room2{
+    position:relative;
+    top: 300px;
+    right: 450px;
 }
