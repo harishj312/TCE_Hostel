@@ -8,6 +8,7 @@
     .controller("firstCtrl",firstCtrl)
     .controller("secondCtrl",secondCtrl);
     firstCtrl.$inject=['$scope'];
+    secondCtrl.$inject=['$scope'];
     function firstCtrl($scope){
         $scope.changeblock=function(block){
             $scope.bl=block;
@@ -40,4 +41,10 @@
                 }
             }
         }
+    }
+    function secondCtrl($scope){
+        $scope.addvalue = function(element) {
+            $scope.val=5;
+            $scope.btnval = element.currentTarget.value;
+         };
     }

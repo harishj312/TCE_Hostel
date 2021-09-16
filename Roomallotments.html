@@ -11,7 +11,7 @@
             <img src="image/logo.jpeg">
             <h2>TCE Hostel</h2>
         </header>
-        <section>
+        <section ng-controller="secondCtrl">
             <h2>Room Allotments</h2>
             <div>
                 <select ng-model="block">
@@ -32,11 +32,16 @@
                     <button>{{x}}</button>
                 </div>
             </div>
+            <button ng-click="addvalue($event)">Sample</button>
             <div class="allot">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
+                <div id="allot1">
+                    <button>1</button>
+                    <button>2</button>
+                </div>
+                <div id="allot2">
+                    <button>3</button>
+                    <button>4</button>
+                </div>
             </div>
             <div class="floor">
                 <h3>{{bl}}-Block</h3>
