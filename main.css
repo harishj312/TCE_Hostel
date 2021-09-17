@@ -16,7 +16,7 @@ header img{
     left: 0px;
 }
 .sidenav {
-    height: 100%;
+    height: 50px;
     width: 0;
     position: fixed;
     z-index: 1;

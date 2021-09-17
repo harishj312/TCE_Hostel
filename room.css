@@ -38,6 +38,10 @@ select{
     background-color: lightgray;
     color: black;
 }
+.floor button:focus{
+    background-color: lightgrey;
+    color: black;
+}
 .room button{
     padding: 40px 40px;
     color: white;
@@ -57,9 +61,9 @@ select{
     right: 450px;
 }
 .allot button{
-    padding: 20px 20px;
-    background-color: aquamarine;
-    font-size: 20px;
+    padding: 15px 15px;
+    background-color:greenyellow;
+    font-size: 15px;
     margin: 10px;
     border: 2px solid grey;
 }
@@ -68,5 +72,26 @@ select{
   width: 200px;
   position: absolute;
   right: 280px;
-  bottom: 200px;
+  bottom: 150px;
+}
+.allot button:hover{
+    background-color: green;
+    color: whitesmoke;
+}
+.allot button:focus{
+    background-color: green;
+    color: whitesmoke;
+}
+#reg{
+    width: 100px;
+    background-color: lightblue;
+    color: black;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+}
+#reg:hover{
+    background-color: #003380;
+    color: whitesmoke;
+    border: 3px solid gray;
 }
