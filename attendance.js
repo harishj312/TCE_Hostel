@@ -10,7 +10,11 @@
         {'Date':'24-Sep-2021','Status':'Present'},
         {'Date':'25-Sep-2021','Status':'Present'},
         {'Date':'26-Sep-2021','Status':'Present'}
-        ]   
+        ]
+        $scope.student1={'Name':'Harish','Dept':'IT','Block':'A','Room':'A1'};
+    })
+    .directive('student',function(){
+       return {template: 'Name:{{student1.Name}} Dept:{{student1.Dept}} Block:{{student1.Block}} Room:{{student1.Room}}'+'<br><br>'};
     })
     .filter('myDate', function($filter) {    
       var angularDateFilter = $filter('date');

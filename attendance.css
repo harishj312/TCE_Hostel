@@ -22,7 +22,6 @@ header img{
     z-index: 1;
     top: 84px;
     left: -100px;
-
     background-color: gainsboro;
     overflow-x: hidden;
     transition: 0.5s;
@@ -77,6 +76,13 @@ span{
     width: 150px;
     height: 500px;
 }
+student{
+  
+
+  height:50px;
+  font-size:30px;
+  
+}
 input{
   width: 30%;
   height:30px;
@@ -105,7 +111,6 @@ tr:nth-child(even){
 
 #attendance{
   margin:50px;
-
 }
 
 
