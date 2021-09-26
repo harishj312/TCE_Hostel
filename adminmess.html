@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="adminmess.css">
+        
+    </head>
+    <body ng-app="hms">
+        <header>
+            <img src="image/logo.jpeg">
+            <h2>TCE Hostel</h2>
+        </header>
+        <section>
+            <div id="nav1">
+                <span onclick="openNav()">&#9776;</span>
+                </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">Logout</a>
+                <a href="attendance.html">Attendance</a>
+              </div>
+        
+        </section>
+      
+        <div id="attendance"  >
+            <button ng-click="breakfast.change()"> Breakfast</button>
+           
+            <div ng-show="breakfast.value" ng-controller="breakfast as breakfast">
+                <table >
+                    <tr id="tablehead">
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                    </tr>
+                    <tr ng-repeat="x in breakfast.food">
+                        <td>{{x.Day}}</td>
+                        <td>{{x.food}}</td>
+                   
+                    </tr>
+                </table>
+            </div>
+            <div  ng-controller="lunch as lunch" >
+                <button ng-click="lunch.change()"> Breakfast</button>
+                
+                <table ng-show="lunch.value">
+                    <tr id="tablehead">
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                    </tr>
+                    <tr ng-repeat="x in lunch.food">
+                        <td>{{x.Day}}</td>
+                        <td>{{x.food}}</td>
+                   
+                    </tr>
+                </table>
+            </div>
+
+            <div  ng-controller="dinner as dinner">
+                <button ng-click="dinner.change()"> Breakfast</button>
+                <table ng-show="dinner.value">
+                    <tr id="tablehead">
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                    </tr>
+                    <tr ng-repeat="x in dinner.food">
+                        <td>{{x.Day}}</td>
+                        <td>{{x.food}}</td>
+                   
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+    </body>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="adminmess.js"></script>
+<!--- Attendance Page --->
+</html>

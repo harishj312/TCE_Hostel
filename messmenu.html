@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main page</title>
+        <link rel="stylesheet" href="messmenu.css">
+        
+    </head>
+    <body ng-app="hms">
+        <header>
+            <img src="image/logo.jpeg">
+            <h2>TCE Hostel</h2>
+        </header>
+        <section>
+            <div id="nav1">
+                <span onclick="openNav()">&#9776;</span>
+                </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">Logout</a>
+                <a href="attendance.html">Attendance</a>
+              </div>
+        
+        </section>
+        <div id="attendance" ng-controller="controller1" >
+            <student></student>
+            <input type="text" ng-model="day" placeholder="Enter Day to search"><br><br>
+            
+            <table>
+                <tr id="tablehead">
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+                <tr ng-repeat="x in food|filter:{'Day':day}">
+                    <td>{{x.Day}}</td>
+                    <td>{{x.Breakfast}}</td>
+                    <td>{{x.Lunch}}</td>
+                    <td>{{x.Dinner}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="messmenu.js"></script>
+<!--- Attendance Page --->
+</html>
